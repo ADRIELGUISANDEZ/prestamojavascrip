@@ -1,0 +1,20 @@
+
+.logo1{
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   transition: 1.5s;
+}
+.container-fluid{
+      background-color: rgba(11, 84, 9, 0.567);
+}
+.nav-item:hover{
+   background-color: rgba(6, 59, 4, 0.567);
+   border-radius: 20%;
+}
+header{
+   width: 100%;
+}
+.logo1:hover{
+   scale: 90%;
+}
