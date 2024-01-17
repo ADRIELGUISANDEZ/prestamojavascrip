@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-moz-selection {
+  background-color: black;
+  color: steelblue;
+}
+*::selection {
+  background-color: black;
+  color: steelblue;
+}
+
+.logo1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 1.5s;
+}
+
+.container-fluid {
+  background-color: rgba(11, 84, 9, 0.567);
+}
+
+.nav-item:hover {
+  background-color: rgba(6, 59, 4, 0.567);
+  border-radius: 20%;
+}
+
+header {
+  width: 100%;
+}
+
+.logo1:hover {
+  scale: 90%;
+}
+
+body {
+  background: url(/img/fondopesos.jpg);
+}
+
+.subtitulo {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+h1:hover {
+  color: rgb(153, 11, 11);
+}
+
+h2:hover {
+  color: rgb(4, 86, 4);
+}
+
+h3:hover {
+  color: aqua;
+}
+
+.caja1 {
+  font-size: xx-large;
+  margin-top: 60px;
+  line-height: 50px;
+}
+
+.caja2 {
+  margin: 50px;
+  text-decoration: none;
+  font-size: 15px;
+  border: 2px solid #000;
+  padding: 2%;
+}
+
+.medio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+.medio .d-block.w-100 {
+  height: 390px;
+}
+.medio .gris-1 {
+  justify-content: center;
+  align-items: center;
+}
+.medio .gris-1 .agregar-carrito {
+  border: 0;
+  background-color: rgb(4, 86, 4);
+  color: white;
+  justify-content: center;
+  padding: 3px;
+  padding-bottom: 10px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+}
+.medio .gris-1 .agregar-carrito:hover {
+  background-color: rgb(19, 116, 19);
+}
+.medio .gris-1 .cuotas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.medio .gris-1 .cuotas p {
+  margin-left: 10px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.medio .gris-1 .gris {
+  height: 250px;
+}
+
+footer {
+  color: white;
+  padding: 20px;
+  margin-top: 25px;
+  text-align: justify;
+  background-color: rgb(63, 63, 63);
+  align-items: center;
+  font-size: 12px;
+}
+
+.redess {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+.redess .facebook,
+.redess .instagram,
+.redess .whatsapp {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.llevatetuprestamo {
+  transition: 1s;
+}
+
+.llevatetuprestamo:hover {
+  scale: 1.2;
+}
+
+.bodyprestamo {
+  background-color: black;
+}
+.bodyprestamo .cuerpoprestamo {
+  margin: 10px auto;
+}
+
+.prestamopersonal {
+  color: white;
+}
+
+.solicitud {
+  margin: 20px;
+  color: white;
+}
+
+.contenedor-carrito {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.contenedor-carrito .carrito-prestamos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contenedor-carrito .carrito-prestamos .carrito-prestamo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(4, 86, 4);
+  color: white;
+  padding: 0.6rem;
+  padding-right: 1.8rem;
+  border-radius: 1rem;
+}
+.contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-imagen {
+  width: 4rem;
+  border-radius: 1rem;
+}
+.contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-titulo .carrito-prestamo-cantidad .carrito-prestamo-preciocuota .carrito-prestamo-preciocuota-subtotal {
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-eliminar {
+  color: white;
+  background-color: black;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 7px;
+}
+.contenedor-carrito .carrito-acciones {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.contenedor-carrito .carrito-acciones .carrito-acciones-izquierda {
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+}
+.contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-borrar {
+  color: white;
+  font-size: large;
+  border-radius: 1.5rem;
+  background-color: rgb(4, 86, 4);
+  padding: 1.5rem;
+}
+.contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-borrar:hover {
+  background-color: rgb(19, 116, 19);
+}
+.contenedor-carrito .carrito-acciones .carrito-acciones-derecha {
+  display: flex;
+}
+.contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
+  display: flex;
+  color: white;
+  font-size: large;
+  border-radius: 1rem 0rem 0rem 1rem;
+  background-color: rgb(4, 86, 4);
+  padding: 1.5rem;
+  margin-left: 20px;
+}
+.contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total p {
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+}
+.contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar {
+  color: black;
+  font-size: large;
+  border: 0;
+  border-radius: 0rem 1rem 1rem 0rem;
+  background-color: white;
+  padding: 1.5rem;
+}
+.contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar:hover {
+  background-color: rgb(194, 185, 185);
+}
+
+@media screen and (max-width: 1300px) {
+  .medio {
+    align-items: center;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "200   300   400";
+    max-width: 100%;
+  }
+  .gris-1 {
+    grid-area: gris;
+    margin: 2px auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .gris-1 .gris {
+    margin: 2px auto;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+  }
+  .mano-1 {
+    grid-area: mano;
+    margin: 2px auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .mano-1 .mano {
+    margin: 2px auto;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+  }
+  .carousel.slide {
+    grid-area: carousel;
+    margin: 20px 100px;
+  }
+  .carousel-item img {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 930px) {
+  .medio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 0.9fr 0.9fr;
+    grid-template-areas: "carousel" "gris" "mano";
+    justify-content: center;
+    align-items: center;
+  }
+  .gris-1 {
+    grid-area: gris;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+  .gris-1 .gris {
+    margin: 0%;
+    height: 300px;
+  }
+  .mano-1 {
+    grid-area: mano;
+    margin: 2px auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .mano-1 .mano {
+    justify-content: center;
+    height: 250px;
+    margin: 2px auto;
+  }
+  .carousel-caption.d-none.d-md-block {
+    font-size: small;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .datos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.3fr 0.9fr;
+    grid-template-areas: "datos1" "fajosmilpesos";
+  }
+  .form-1 {
+    grid-area: datos1;
+    margin-right: 100px;
+  }
+  .fajosmilpesos {
+    grid-area: fajosmilpesos;
+  }
+  .fajosmilpesos {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 1048px) {
+  .datos-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 1fr;
+    grid-template-areas: "mapa" "form-2";
+  }
+  .form-2 {
+    grid-area: form-2;
+  }
+  .mapa {
+    grid-area: mapa;
+  }
+  .mapa iframe {
+    position: relative;
+    top: 40px;
+    left: 30px;
+    border-radius: 20px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 830px) {
+  .nosotrosflex {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.9fr 1.1fr;
+    grid-template-areas: "quienes" "log";
+  }
+  .nosotrosflex .quienessomos {
+    grid-area: quienes;
+  }
+  .nosotrosflex .nosotroslogo {
+    grid-area: log;
+    margin: 2px auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .nosotrosflex .nosotroslogo img {
+    border-radius: 50%;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .nosotrosflex .quienessomos {
+    text-align: center;
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .conteiner1 {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "col1 col2 col3" "col4 col5 col6";
+  }
+  .conteiner1 .col1 {
+    grid-area: col1;
+  }
+  .conteiner1 .col2 {
+    grid-area: col2;
+  }
+  .conteiner1 .col3 {
+    grid-area: col3;
+  }
+  .conteiner1 .col4 {
+    grid-area: col4;
+  }
+  .conteiner1 .col5 {
+    grid-area: col5;
+  }
+  .conteiner1 .col6 {
+    grid-area: col6;
+  }
+}
+@media screen and (max-width: 885px) {
+  .conteiner1 {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "col1" "col2" "col3" "col4" "col5" "col6";
+  }
+  .conteiner1 .col1 {
+    grid-area: col1;
+  }
+  .conteiner1 .col2 {
+    grid-area: col2;
+  }
+  .conteiner1 .col3 {
+    grid-area: col3;
+  }
+  .conteiner1 .col4 {
+    grid-area: col4;
+  }
+  .conteiner1 .col5 {
+    grid-area: col5;
+  }
+  .conteiner1 .col6 {
+    grid-area: col6;
+  }
+}
+@media screen and (max-width: 805px) {
+  .imgchiquitas {
+    display: grid;
+    margin: 30px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "reloj          dolar" "porcentaje     cuaderno";
+  }
+  .imgchiquitas .card1 {
+    grid-area: reloj;
+    text-align: center;
+  }
+  .imgchiquitas .card2 {
+    grid-area: dolar;
+    text-align: center;
+  }
+  .imgchiquitas .card3 {
+    grid-area: porcentaje;
+    text-align: center;
+  }
+  .imgchiquitas .card4 {
+    grid-area: cuaderno;
+    text-align: center;
+  }
+}/*# sourceMappingURL=estilo.css.map */
