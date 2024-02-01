@@ -125,5 +125,26 @@ window.addEventListener("load", function () {
 }
 
 actualizarCantidadCarrito();
+    // Función para vaciar el carrito
+    function vaciarCarrito() {
+        carrito = [];
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        mostrarProductosEnCarrito();
+        actualizarCantidadCarrito();
+    }
+
+    // Función para solicitar los préstamos
+    function solicitarPrestamos() {
+        // Puedes agregar aquí la lógica para enviar la solicitud de préstamos, por ejemplo, a través de una API
+        // En este ejemplo, solo mostraremos una alerta
+        alert('Los préstamos fueron solicitados');
+    }
+
+    // Evento para el botón "Vaciar Carrito"
+    document.getElementById('vaciarCarrito').addEventListener('click', vaciarCarrito);
+
+    // Evento para el botón "Solicitar Ahora"
+    document.getElementById('solicitarAhora').addEventListener('click', solicitarPrestamos);
+
 });
 
