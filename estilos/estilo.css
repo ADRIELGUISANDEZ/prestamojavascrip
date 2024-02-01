@@ -13,32 +13,31 @@
   color: steelblue;
 }
 
-.logo1 {
+header {
+  width: 100%;
+}
+header .container-fluid {
+  background-color: rgba(11, 84, 9, 0.567);
+}
+header .container-fluid .navbar-brand .logo1 {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   transition: 1.5s;
 }
-
-.container-fluid {
-  background-color: rgba(11, 84, 9, 0.567);
+header .container-fluid .navbar-brand .logo1:hover {
+  scale: 90%;
 }
-
-.nav-item:hover {
+header .container-fluid .collapse .navbar-collapse .navbar-nav .nav-item:hover {
   background-color: rgba(6, 59, 4, 0.567);
   border-radius: 20%;
 }
-
-header {
-  width: 100%;
-}
-
-.logo1:hover {
-  scale: 90%;
+header .container-fluid .collapse .navbar-collapse .navbar-nav .nav-item .nav-link.active .cantidad {
+  background-color: black;
 }
 
 body {
-  background: url(/img/fondopesos.jpg);
+  background: rgb(16, 156, 16);
 }
 
 .subtitulo {
@@ -215,30 +214,31 @@ footer {
   border-radius: 0.5rem;
   padding: 7px;
 }
-.contenedor-carrito .carrito-acciones {
+
+.carrito-acciones {
   display: flex;
   justify-content: space-between;
   color: white;
 }
-.contenedor-carrito .carrito-acciones .carrito-acciones-izquierda {
+.carrito-acciones .carrito-acciones-izquierda {
   align-items: center;
   margin: 0;
   padding: 0.5rem 0.5rem;
 }
-.contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-borrar {
+.carrito-acciones .carrito-acciones-izquierda .carrito-borrar {
   color: white;
   font-size: large;
   border-radius: 1.5rem;
   background-color: rgb(4, 86, 4);
   padding: 1.5rem;
 }
-.contenedor-carrito .carrito-acciones .carrito-acciones-izquierda .carrito-borrar:hover {
+.carrito-acciones .carrito-acciones-izquierda .carrito-borrar:hover {
   background-color: rgb(19, 116, 19);
 }
-.contenedor-carrito .carrito-acciones .carrito-acciones-derecha {
+.carrito-acciones .carrito-acciones-derecha {
   display: flex;
 }
-.contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
   display: flex;
   color: white;
   font-size: large;
@@ -247,12 +247,12 @@ footer {
   padding: 1.5rem;
   margin-left: 20px;
 }
-.contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total p {
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-total p {
   align-items: center;
   margin: 0;
   padding: 0.5rem 0.5rem;
 }
-.contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar {
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar {
   color: black;
   font-size: large;
   border: 0;
@@ -260,7 +260,7 @@ footer {
   background-color: white;
   padding: 1.5rem;
 }
-.contenedor-carrito .carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar:hover {
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar:hover {
   background-color: rgb(194, 185, 185);
 }
 

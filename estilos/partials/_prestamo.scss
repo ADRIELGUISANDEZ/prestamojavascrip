@@ -55,68 +55,61 @@
                 padding: 7px;
             }
         }
-
     }
-
-    .carrito-acciones{
-        display: flex;
-        justify-content: space-between;
-        color: white;
-
-        .carrito-acciones-izquierda{
-            align-items: center;
-            margin: 0;
-            padding: 0.5rem 0.5rem;
-
-            .carrito-borrar{
-                color: white;
-                font-size: large;
-                border-radius: 1.5rem;
-                background-color: rgb(4, 86, 4);
-                padding: 1.5rem;
-                &:hover{
-                    background-color: rgb(19, 116, 19); 
-                } 
-            }
-        }
-
-        .carrito-acciones-derecha{
-            display: flex;
-            .carrito-acciones-total{
-                display: flex;
-                color: white;
-                font-size: large;
-                border-radius: 1rem 0rem 0rem 1rem;
-                background-color: rgb(4, 86, 4);
-                padding: 1.5rem;
-                margin-left: 20px;
-
-                p{
-                    align-items: center;
-                    margin: 0;
-                    padding: 0.5rem 0.5rem;
-                }
-            }
-            .carrito-acciones-solicitar{
-                color: black;
-                font-size: large;
-                border: 0;
-                border-radius: 0rem 1rem 1rem 0rem;
-                background-color: white;
-                padding: 1.5rem;
-                &:hover{
-                    background-color: rgb(194, 185, 185); 
-                } 
-            }
-        }
-    }
-
 }
 
+.carrito-acciones{
+    display: flex;
+    justify-content: space-between;
+    color: white;
 
+    .carrito-acciones-izquierda{
+        align-items: center;
+        margin: 0;
+        padding: 0.5rem 0.5rem;
 
+        .carrito-borrar{
+            color: white;
+            font-size: large;
+            border-radius: 1.5rem;
+            background-color: rgb(4, 86, 4);
+            padding: 1.5rem;
+            &:hover{
+                background-color: rgb(19, 116, 19); 
+            } 
+        }
+    }
 
+    .carrito-acciones-derecha{
+        display: flex;
 
+        .carrito-acciones-total{
+            display: flex;
+            color: white;
+            font-size: large;
+            border-radius: 1rem 0rem 0rem 1rem;
+            background-color: rgb(4, 86, 4);
+            padding: 1.5rem;
+            margin-left: 20px;
 
+            p{
+                align-items: center;
+                margin: 0;
+                padding: 0.5rem 0.5rem;
+            }
+        }
 
+        .carrito-acciones-solicitar{
+            color: black;
+            font-size: large;
+            border: 0;
+            border-radius: 0rem 1rem 1rem 0rem;
+            background-color: white;
+            padding: 1.5rem;
+            &:hover{
+                background-color: rgb(194, 185, 185); 
+            } 
+        }
+    }
+}
 
