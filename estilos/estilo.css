@@ -168,28 +168,25 @@ footer {
 .bodyprestamo .cuerpoprestamo {
   margin: 10px auto;
 }
-
-.prestamopersonal {
+.bodyprestamo .cuerpoprestamo .prestamopersonal {
   color: white;
 }
-
-.solicitud {
+.bodyprestamo .cuerpoprestamo .solicitud {
   margin: 20px;
   color: white;
 }
-
-.contenedor-carrito {
+.bodyprestamo .cuerpoprestamo .contenedor-carrito {
   margin: 50px;
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
 }
-.contenedor-carrito .carrito-prestamos {
+.bodyprestamo .cuerpoprestamo .contenedor-carrito .carrito-prestamos {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.contenedor-carrito .carrito-prestamos .carrito-prestamo {
+.bodyprestamo .cuerpoprestamo .contenedor-carrito .carrito-prestamos .carrito-prestamo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -199,46 +196,45 @@ footer {
   padding-right: 1.8rem;
   border-radius: 1rem;
 }
-.contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-imagen {
+.bodyprestamo .cuerpoprestamo .contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-imagen {
   width: 4rem;
   border-radius: 1rem;
 }
-.contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-titulo .carrito-prestamo-cantidad .carrito-prestamo-preciocuota .carrito-prestamo-preciocuota-subtotal {
+.bodyprestamo .cuerpoprestamo .contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-titulo .carrito-prestamo-cantidad .carrito-prestamo-preciocuota .carrito-prestamo-preciocuota-subtotal {
   justify-content: center;
   align-items: center;
 }
-.contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-eliminar {
+.bodyprestamo .cuerpoprestamo .contenedor-carrito .carrito-prestamos .carrito-prestamo .carrito-prestamo-eliminar {
   color: white;
   background-color: black;
   border: 0;
   border-radius: 0.5rem;
   padding: 7px;
 }
-
-.carrito-acciones {
+.bodyprestamo .cuerpoprestamo .carrito-acciones {
   display: flex;
   justify-content: space-between;
   color: white;
 }
-.carrito-acciones .carrito-acciones-izquierda {
+.bodyprestamo .cuerpoprestamo .carrito-acciones .carrito-acciones-izquierda {
   align-items: center;
   margin: 0;
   padding: 0.5rem 0.5rem;
 }
-.carrito-acciones .carrito-acciones-izquierda .carrito-borrar {
+.bodyprestamo .cuerpoprestamo .carrito-acciones .carrito-acciones-izquierda .carrito-borrar {
   color: white;
   font-size: large;
   border-radius: 1.5rem;
   background-color: rgb(4, 86, 4);
   padding: 1.5rem;
 }
-.carrito-acciones .carrito-acciones-izquierda .carrito-borrar:hover {
+.bodyprestamo .cuerpoprestamo .carrito-acciones .carrito-acciones-izquierda .carrito-borrar:hover {
   background-color: rgb(19, 116, 19);
 }
-.carrito-acciones .carrito-acciones-derecha {
+.bodyprestamo .cuerpoprestamo .carrito-acciones .carrito-acciones-derecha {
   display: flex;
 }
-.carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
+.bodyprestamo .cuerpoprestamo .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
   display: flex;
   color: white;
   font-size: large;
@@ -247,12 +243,12 @@ footer {
   padding: 1.5rem;
   margin-left: 20px;
 }
-.carrito-acciones .carrito-acciones-derecha .carrito-acciones-total p {
+.bodyprestamo .cuerpoprestamo .carrito-acciones .carrito-acciones-derecha .carrito-acciones-total p {
   align-items: center;
   margin: 0;
   padding: 0.5rem 0.5rem;
 }
-.carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar {
+.bodyprestamo .cuerpoprestamo .carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar {
   color: black;
   font-size: large;
   border: 0;
@@ -260,7 +256,7 @@ footer {
   background-color: white;
   padding: 1.5rem;
 }
-.carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar:hover {
+.bodyprestamo .cuerpoprestamo .carrito-acciones .carrito-acciones-derecha .carrito-acciones-solicitar:hover {
   background-color: rgb(194, 185, 185);
 }
 
