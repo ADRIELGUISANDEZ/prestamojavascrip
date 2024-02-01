@@ -7,9 +7,17 @@ window.addEventListener("load", function () {
       cantidadCarritoElement.textContent = carrito.length;
     }
   }
-
+    // Calcular el total del carrito
+    function calcularTotalCarrito() {
+        let total = 0;
+        carrito.forEach(producto => {
+            total += producto.cantidad * producto.precio;
+        });
+        return total;
+    }
   function mostrarProductosEnCarrito() {
     const carritoContainer = document.querySelector(".carrito-prestamos");
+    const totalCarritoElement = document.getElementById('total');
     carritoContainer.innerHTML = "";
 
     const productosAgrupados = {};
@@ -18,7 +26,7 @@ window.addEventListener("load", function () {
       if (!productosAgrupados[producto.nombre]) {
         productosAgrupados[producto.nombre] = {
           ...producto,
-          cantidad: 0, // Inicializar la cantidad
+          cantidad: 0, 
         };
       }
       productosAgrupados[producto.nombre].cantidad += 1;
@@ -59,9 +67,20 @@ window.addEventListener("load", function () {
         .addEventListener("click", function () {
           eliminarProductoDelCarrito(productoAgrupado.nombre);
           mostrarProductosEnCarrito();
+          actualizarTotalCarrito();
         });
     });
+    
+        // Actualiza el total del carrito
+        actualizarTotalCarrito();
   }
+  function actualizarTotalCarrito() {
+    const totalCarritoElement = document.getElementById('total');
+    if (totalCarritoElement) {
+        const total = calcularTotalCarrito();
+        totalCarritoElement.textContent = total;
+    }
+}
 
   function eliminarProductoDelCarrito(nombreProducto) {
     carrito = carrito.filter((producto) => producto.nombre !== nombreProducto);
@@ -105,9 +124,19 @@ window.addEventListener("load", function () {
         carrito.push(productoCarrito);
         localStorage.setItem("carrito", JSON.stringify(carrito));
         actualizarCantidadCarrito();
+        
+    Swal.fire({
+        title: "Préstamo Agregado",
+        text: "Agregado al Carrito",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+        iconColor: "grey",
+      });
+
 
         if (window.location.href.includes("carrito.html")) {
           mostrarProductosEnCarrito();
+          actualizarTotalCarrito();
         }
       });
 
@@ -116,6 +145,8 @@ window.addEventListener("load", function () {
 
   if (window.location.href.includes("carrito.html")) {
     mostrarProductosEnCarrito();
+    actualizarTotalCarrito();
+
   }
   function actualizarCantidadCarrito() {
     const cantidadCarrito = document.getElementById('cantidadCarrito');
@@ -125,7 +156,7 @@ window.addEventListener("load", function () {
 }
 
 actualizarCantidadCarrito();
-    // Función para vaciar el carrito
+    // Vaciar el carrito
     function vaciarCarrito() {
         carrito = [];
         localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -133,18 +164,29 @@ actualizarCantidadCarrito();
         actualizarCantidadCarrito();
     }
 
-    // Función para solicitar los préstamos
+    // Solicitar los préstamos
     function solicitarPrestamos() {
-        // Puedes agregar aquí la lógica para enviar la solicitud de préstamos, por ejemplo, a través de una API
-        // En este ejemplo, solo mostraremos una alerta
-        alert('Los préstamos fueron solicitados');
+    carrito = [];
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    // Actualizar cantidad en el carrito y el total 
+    actualizarCantidadCarrito();
+    actualizarTotalCarrito();
+    
+
+    // Limpiar productos 
+    mostrarProductosEnCarrito();
+    
+    alert('Los préstamos fueron solicitados');
     }
 
-    // Evento para el botón "Vaciar Carrito"
+    // botón Vaciar Carrito
     document.getElementById('vaciarCarrito').addEventListener('click', vaciarCarrito);
 
-    // Evento para el botón "Solicitar Ahora"
+    // botón Solicitar Ahora
     document.getElementById('solicitarAhora').addEventListener('click', solicitarPrestamos);
+
+
 
 });
 
