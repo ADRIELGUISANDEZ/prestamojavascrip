@@ -71,8 +71,8 @@ window.addEventListener("load", function () {
         });
     });
     
-        // Actualiza el total del carrito
-        actualizarTotalCarrito();
+  // Actualiza el total del carrito
+  actualizarTotalCarrito();
   }
   function actualizarTotalCarrito() {
     const totalCarritoElement = document.getElementById('total');
@@ -179,12 +179,17 @@ actualizarCantidadCarrito();
     
     alert('Los préstamos fueron solicitados');
     }
+// botón Vaciar Carrito
+const vaciarCarritoButton = document.getElementById('vaciarCarrito');
+if (vaciarCarritoButton) {
+    vaciarCarritoButton.addEventListener('click', vaciarCarrito);
+}
 
-    // botón Vaciar Carrito
-    document.getElementById('vaciarCarrito').addEventListener('click', vaciarCarrito);
-
-    // botón Solicitar Ahora
-    document.getElementById('solicitarAhora').addEventListener('click', solicitarPrestamos);
+// botón Solicitar Ahora
+const solicitarAhoraButton = document.getElementById('solicitarAhora');
+if (solicitarAhoraButton) {
+    solicitarAhoraButton.addEventListener('click', solicitarPrestamos);
+}
 
 
 
