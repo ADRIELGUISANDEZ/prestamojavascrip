@@ -1,0 +1,5 @@
+[
+    { "nombre": "Préstamo 200 mil", "precio": 50000, "imagen": "./img/200.png" },
+    { "nombre": "Préstamo 300 mil", "precio": 75000, "imagen": "./img/300.png" },
+    { "nombre": "Préstamo 400 mil", "precio": 100000, "imagen": "./img/400.png" }
+  ]

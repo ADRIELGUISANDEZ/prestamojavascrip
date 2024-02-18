@@ -90,19 +90,17 @@ window.addEventListener("load", function () {
 
   actualizarCantidadCarrito();
 
-  const productos = [
-    { nombre: "Préstamo 200 mil", precio: 50000, imagen: "./img/200.png" },
-    { nombre: "Préstamo 300 mil", precio: 75000, imagen: "./img/300.png" },
-    { nombre: "Préstamo 400 mil", precio: 100000, imagen: "./img/400.png" },
-  ];
-
   const medio = document.getElementById("medio");
 
-  productos.forEach((producto, index) => {
-    const divProducto = document.createElement("div");
-    divProducto.classList.add("gris-1");
+  // Solicitud Fetch para obtener productos desde archivo JSON
+  fetch("productos.json")
+    .then((response) => response.json())
+    .then((productos) => {
+      productos.forEach((producto, index) => {
+        const divProducto = document.createElement("div");
+        divProducto.classList.add("gris-1");
 
-    divProducto.innerHTML = `
+        divProducto.innerHTML = `
             <img class="gris" src="${producto.imagen}" alt="${producto.nombre}" />
             <div class="cuotas">
                 <p>Cuota</p>
@@ -111,87 +109,84 @@ window.addEventListener("load", function () {
             <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${producto.precio}" data-imagen="${producto.imagen}">Agregar Carrito</button>
         `;
 
-    divProducto
-      .querySelector(".agregar-carrito")
-      .addEventListener("click", function () {
-        const productoCarrito = {
-          nombre: this.dataset.nombre,
-          precio: parseFloat(this.dataset.precio),
-          imagen: this.dataset.imagen,
-          cantidad: 1,
-        };
+        divProducto
+          .querySelector(".agregar-carrito")
+          .addEventListener("click", function () {
+            const productoCarrito = {
+              nombre: this.dataset.nombre,
+              precio: parseFloat(this.dataset.precio),
+              imagen: this.dataset.imagen,
+              cantidad: 1,
+            };
 
-        carrito.push(productoCarrito);
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        actualizarCantidadCarrito();
-        
-    Swal.fire({
-        title: "Préstamo Agregado",
-        text: "Agregado al Carrito",
-        icon: "success",
-        confirmButtonText: "Aceptar",
-        iconColor: "grey",
+            carrito.push(productoCarrito);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarCantidadCarrito();
+
+            Swal.fire({
+              title: "Préstamo Agregado",
+              text: "Agregado al Carrito",
+              icon: "success",
+              confirmButtonText: "Aceptar",
+              iconColor: "grey",
+            });
+
+            if (window.location.href.includes("carrito.html")) {
+              mostrarProductosEnCarrito();
+              actualizarTotalCarrito();
+            }
+          });
+
+        medio.appendChild(divProducto);
       });
-
-
-        if (window.location.href.includes("carrito.html")) {
-          mostrarProductosEnCarrito();
-          actualizarTotalCarrito();
-        }
-      });
-
-    medio.appendChild(divProducto);
-  });
+    })
+    .catch((error) => console.error("Error al obtener los productos:", error));
 
   if (window.location.href.includes("carrito.html")) {
     mostrarProductosEnCarrito();
     actualizarTotalCarrito();
-
   }
+
   function actualizarCantidadCarrito() {
-    const cantidadCarrito = document.getElementById('cantidadCarrito');
+    const cantidadCarrito = document.getElementById("cantidadCarrito");
     if (cantidadCarrito) {
-        cantidadCarrito.textContent = carrito.length;
+      cantidadCarrito.textContent = carrito.length;
     }
-}
+  }
 
-actualizarCantidadCarrito();
-    // Vaciar el carrito
-    function vaciarCarrito() {
-        carrito = [];
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        mostrarProductosEnCarrito();
-        actualizarCantidadCarrito();
-    }
-
-    // Solicitar los préstamos
-    function solicitarPrestamos() {
+  // Vaciar el carrito
+  function vaciarCarrito() {
     carrito = [];
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarProductosEnCarrito();
+    actualizarCantidadCarrito();
+  }
 
-    // Actualizar cantidad en el carrito y el total 
+  // Solicitar los préstamos
+  function solicitarPrestamos() {
+    carrito = [];
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    // Actualizar cantidad en el carrito y el total
     actualizarCantidadCarrito();
     actualizarTotalCarrito();
-    
 
-    // Limpiar productos 
+    // Limpiar productos
     mostrarProductosEnCarrito();
-    
-    alert('Los préstamos fueron solicitados');
-    }
-// botón Vaciar Carrito
-const vaciarCarritoButton = document.getElementById('vaciarCarrito');
-if (vaciarCarritoButton) {
-    vaciarCarritoButton.addEventListener('click', vaciarCarrito);
-}
 
-// botón Solicitar Ahora
-const solicitarAhoraButton = document.getElementById('solicitarAhora');
-if (solicitarAhoraButton) {
-    solicitarAhoraButton.addEventListener('click', solicitarPrestamos);
-}
+    alert("Los préstamos fueron solicitados");
+  }
 
+  // botón Vaciar Carrito
+  const vaciarCarritoButton = document.getElementById("vaciarCarrito");
+  if (vaciarCarritoButton) {
+    vaciarCarritoButton.addEventListener("click", vaciarCarrito);
+  }
 
-
+  // botón Solicitar Ahora
+  const solicitarAhoraButton = document.getElementById("solicitarAhora");
+  if (solicitarAhoraButton) {
+    solicitarAhoraButton.addEventListener("click", solicitarPrestamos);
+  }
 });
 
